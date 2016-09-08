@@ -1,0 +1,30 @@
+body{
+	font-family:'Open Sans', sans-serif;
+	color: #ff4242;
+	background: #f7cccc;
+}
+
+h1 {
+	font-family: 'Abril Fatface';
+	font-size: 60px;
+	margin-top: 80px;
+}
+
+.intro {
+	font-size: 21px;
+	margin: auto;
+	width: 60%;
+}
+
+.row {
+	margin-top: 100px;
+	text-align: center;
+}
+
+.btn_big {
+	background-color: #ff4242;
+	color: #f7cccc;
+	border: none;
+	padding: 10px 30px;
+	font-size: 20px;
+}
