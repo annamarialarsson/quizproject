@@ -6,13 +6,13 @@ quizzes = [
 		"quiz_number":1,
 		"name": "Klassiska böcker",
 		"description": "Hur bra kan du dina klassiker?"
-	}
+	},
 
 	{
 		"quiz_number": 2,
 		"name": "Största lagen",
 		"description": "Kan du dina lag?"
-	}
+	},
 
 	{
 		"quiz_number": 3,
@@ -23,7 +23,10 @@ quizzes = [
 ]
 
 def startpage(request):
-	return render(request, "quiz/startpage.html")
+	context = {
+		"quizzes": quizzes,
+	}
+	return render(request, "quiz/startpage.html", context)
 
 def quiz(request):
 	return render (request, "quiz/quiz.html")
