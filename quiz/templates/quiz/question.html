@@ -11,25 +11,14 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> </head>
 <body>
 	<div class="intro">
-		<h1>Anna Marías magiska quiz</h1>
-		<p>Välkommen till detta magiska quiz. Du kommer få fyra frågor i varje quiz som du ska svara på så snabbt och rätt du kan.Välj först vilket quiz du vill börja med.</p>
+		<h1>{{ question_number}}. {{ question}}</h1>
+		<p>{{ answer1 }}</p>
+		<p>{{ answer2 }}</p>
+		<p>{{ answer3 }}</p>
 	</div>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3">
-				<a href="quiz.html" class="btn_big">Quiz 1</a>
-			</div>	
-			<div class="col-md-3">
-				<a href="quiz.html" class="btn_big">Quiz 2</a>
-			</div>	
-			<div class="col-md-3">
-				<a href="quiz.html" class="btn_big">Quiz 3</a>
-			</div>	
-			<div class="col-md-3">
-				<a href="quiz.html" class="btn_big">Quiz 4</a>
-			</div>	
-		</div>	
+	<p><a href="{% url 'completed_page' quiz_number%}">Nästa</a></p>
+	
 	</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

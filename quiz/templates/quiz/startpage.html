@@ -15,25 +15,16 @@
 		<h1>Anna Marías magiska quiz</h1>
 		<p>Välkommen till detta magiska quiz. Du kommer få fyra frågor i varje quiz som du ska svara på så snabbt och rätt du kan.Välj först vilket quiz du vill börja med.</p>
 	</div>
-	
-	{% for quiz in quizzes %}
-		<p><a href="{% url 'quiz_page' quiz.quiz_number %}" class="btn_big">{{quiz.name}}</a></p>
-	{% endfor %}
 		
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3">
-				<a href="quiz.html" class="btn_big">Quiz 1</a>
+			{% for quiz in quizzes %}
+			<div class="col-md-4">
+				<a href="{% url 'quiz_page' quiz.quiz_number %}" class="btn_big">
+				{{ quiz.name }}</a>
 			</div>	
-			<div class="col-md-3">
-				<a href="quiz.html" class="btn_big">Quiz 2</a>
-			</div>	
-			<div class="col-md-3">
-				<a href="quiz.html" class="btn_big">Quiz 3</a>
-			</div>	
-			<div class="col-md-3">
-				<a href="quiz.html" class="btn_big">Quiz 4</a>
-			</div>	
+			{% endfor %}
+
 		</div>	
 	</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
