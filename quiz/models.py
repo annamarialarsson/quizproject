@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 class Quiz(models.Model):
 		quiz_number = models.PositiveIntegerField()
 		name = models.CharField(max_length=100)
@@ -14,4 +12,5 @@ class Question(models.Model):
 	answer1 = models.CharField(max_length=100)
 	answer2 = models.CharField(max_length=100)
 	answer3 = models.CharField(max_length=100)	
-	correct = models.ForeignKey(Quiz, related_name="questions")
+	correct = models.PositiveIntegerField()
+	quiz = models.ForeignKey(Quiz, related_name="questions")
