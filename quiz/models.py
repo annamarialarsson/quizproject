@@ -4,6 +4,7 @@ class Quiz(models.Model):
 		quiz_number = models.PositiveIntegerField()
 		name = models.CharField(max_length=100)
 		description = models.TextField()
+		glyph = models.CharField(max_length=100)
 		def __str__(self):
 			return self.name
 

@@ -1,3 +1,4 @@
+from quiz.models import Quiz
 from django.shortcuts import render
 
 quizzes = [
@@ -27,13 +28,13 @@ quizzes = [
 
 def startpage(request):
 	context = {
-		"quizzes": quizzes,
+		"quizzes": Quiz.objects.all(),
 	}
 	return render(request, "quiz/startpage.html", context)
 
 def quiz(request, quiz_number):
 	context = {
-		"quiz": quizzes[int(quiz_number) - 1],
+		"quiz": Quiz.objects.get(quiz_number=quiz_number),
 		"quiz_number": quiz_number,
 	}
 	return render (request, "quiz/quiz.html", context)
