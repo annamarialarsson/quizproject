@@ -19,7 +19,7 @@
 
 		<div class="radio">
 		<label>
-			<input type="radio" name="answer" value="1" id="optionsRadios1">
+			<input type="radio" name="answer" value="1" id="optionsRadios1" checked="">
 			{{ answer1 }}
 		</label>
 		<br>
@@ -35,7 +35,7 @@
 		</div>		
 	</div>
 
-	<p><a href="{% url 'completed_page' quiz_number%}">Nästa</a></p>
+	<button type="submit">Nästa</button>
 	
 </form>
 
