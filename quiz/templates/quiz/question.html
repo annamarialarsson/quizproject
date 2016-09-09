@@ -10,14 +10,34 @@
 	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> </head>
 <body>
-	<div class="intro">
-		<h1>{{ question_number}}. {{ question}}</h1>
-		<p>{{ answer1 }}</p>
-		<p>{{ answer2 }}</p>
-		<p>{{ answer3 }}</p>
+
+<form action="{% url 'answer_page' quiz.quiz_number question_number %}" method="post">
+	{% csrf_token %}
+
+<div class="intro">
+	<h1>{{ question_number}}. {{ question}}</h1>
+
+		<div class="radio">
+		<label>
+			<input type="radio" name="answer" value="1" id="optionsRadios1">
+			{{ answer1 }}
+		</label>
+		<br>
+		<label>
+			<input type="radio" name="answer" value="2" id="optionsRadios1">
+			{{ answer2 }}
+		</label>
+		<br>
+		<label>
+			<input type="radio" name="answer" value="3" id="optionsRadios1">
+			{{ answer3 }}
+		</label>	
+		</div>		
 	</div>
 
 	<p><a href="{% url 'completed_page' quiz_number%}">Nästa</a></p>
+	
+</form>
 
 	
 	
