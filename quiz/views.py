@@ -4,20 +4,23 @@ quizzes = [
 	
 	{
 		"quiz_number":1,
-		"name": "Klassiska böcker",
-		"description": "Hur bra kan du dina klassiker?"
+		"name": "Glassquizet",
+		"description": "Vad kan du egentligen om glass?",
+		"glyph": "glyphicon glyphicon-ice-lolly-tasted",
 	},
 
 	{
 		"quiz_number": 2,
-		"name": "Största lagen",
-		"description": "Kan du dina lag?"
+		"name": "Ljusquizet",
+		"description": "Vad kan du egentligen om historiska genier?",
+		"glyph": "glyphicon glyphicon-lamp",
 	},
 
 	{
 		"quiz_number": 3,
-		"name": "Världens mest kända hackare",
-		"description": "Kan du dina lag?"
+		"name": "Resequizet",
+		"description": "Vad kan du om packning?",
+		"glyph": "glyphicon glyphicon-plane",
 	}
 
 ]
@@ -54,4 +57,4 @@ def completed(request, quiz_number):
 	}
 	return render(request, "quiz/completed.html", context)
 
-	
+
