@@ -41,6 +41,8 @@ a:hover {
 	font-size: 21px;
 	margin: auto;
 	width: 70%;
+	text-align: center;
+	margin-top: 60px;
 }
 
 
@@ -68,4 +70,6 @@ a:hover {
 	margin: 40px;
 }
 
-
+.centerbutton {
+	text-align: center;
+}
