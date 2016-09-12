@@ -14,10 +14,10 @@
 	<div class="intro">
 		<h1>{{ quiz.name}}</h1>
 		<p class="intro">{{ quiz.description}}</p>
+		<br>
+		<button class="btn_big"><a href="{% url 'question_page' quiz_number 1 %}">Starta</a></button>
 	</div>
-	
-	<p class="intro"><a href="{% url 'question_page' quiz_number 1 %}">Starta</a></p>
-	
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>
